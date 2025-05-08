@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        Maven 'Maven_3.8.7'
+        maven 'Maven_3.8.7'
         jdk 'JDK_17'
     }
 
@@ -19,11 +19,5 @@ pipeline {
             }
         }
 
-        stage('Deploy WAR') {
-            steps {
-                // Replace with your actual remote details
-                sh 'scp target/my-webapp.war user@your-server:/path/to/tomcat/webapps/'
-            }
-        }
     }
 }
